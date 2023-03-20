@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Entities
+@model List<Product>
+@{
+    ViewBag.Title = "CriticalStock";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>Ürün Bilgisi</th>
+        <th>Stok Sayısı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.Stock < 50)
+        {
+            <tr style="background-color:red">
+                <td>@item.Name</td>
+                <td>@item.Stock</td>
+            </tr>
+            @Html.Action("StokYellow")
+
+        }
+
+    }
+</table>
+

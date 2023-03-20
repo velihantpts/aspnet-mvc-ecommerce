@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Entities.Comment
+@{
+    Layout = null;
+}
+
+<link href="~/eshop/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <div class="row">
+        <br /> 
+        <div class="col-md-4 col-sm-4">
+            <form method="post" >
+                <input type="hidden" name="ProductId" value="@Model.Product.Id" />
+                <input type="hidden" name="UserId" value="@Session["userid"]" />
+                <input type="hidden" name="Date" value="@DateTime.Now" />
+
+                @Html.TextAreaFor(x => x.Icerik, new { @class = "form-control" })
+                <br />
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+            </form>
+               
+        </div>
+    </div>
+</div>

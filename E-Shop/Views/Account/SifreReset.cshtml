@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Entities.User
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>@ViewBag.uyari</h2>
+
+@using (Html.BeginForm("SifreReset", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+
+        <div class="form-group">
+
+            <div class="form-group">
+
+                <input type="email" name="Email" placeholder="Email Adresiniz" />
+                @Html.ValidationMessageFor(x => x.Email, "", new { @style = "color:red" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Şifreyi Sıfırla" class="btn btn-success" />
+            </div>
+
+        </div>
+    </div>
+}

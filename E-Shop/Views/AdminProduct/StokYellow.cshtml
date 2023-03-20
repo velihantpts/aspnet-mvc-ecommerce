@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Entities
+@model List<Product>
+@{
+    ViewBag.Title = "StokYellow";
+    Layout = null;
+}
+
+<table class="table table-bordered" style="margin-top:-23px;">
+
+ 
+        @foreach (var item in Model)
+        {
+            if (item.Stock == 50)
+            {
+          <tr style="background-color:yellow">
+                <td>@item.Name</td>
+                <td>@item.Stock</td>
+            </tr>
+            
+
+        }
+
+    }
+</table>
+

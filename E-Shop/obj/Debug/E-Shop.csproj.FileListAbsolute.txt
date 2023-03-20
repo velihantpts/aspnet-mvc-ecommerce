@@ -1,0 +1,2 @@
+C:\Users\Lenovo\Source\Repos\E-Shop\E-Shop\obj\Debug\E-Shop.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Source\Repos\E-Shop\E-Shop\obj\Debug\E-Shop.csproj.CoreCompileInputs.cache
